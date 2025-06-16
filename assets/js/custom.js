@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var swiper = new Swiper(".mySwiper", {
+  const swiper = new Swiper(".mySwiper", {
     speed: 600,
     parallax: true,
     loop: true,
     autoplay: {
       delay: 3000, // 3 seconds between slides
-      disableOnInteraction: true, // continues autoplay after user interactions
+      disableOnInteraction: true, 
     },
     pagination: {
       el: ".swiper-pagination",
@@ -17,3 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
     },
   });
 });
+
+document.querySelectorAll('.init-swiper').forEach((swiperEl) => {
+  const config = JSON.parse(swiperEl.querySelector('.swiper-config').innerText);
+  new Swiper(swiperEl, config);
+});
+
+
+
