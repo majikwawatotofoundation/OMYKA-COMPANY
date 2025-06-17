@@ -2725,6 +2725,23 @@ section,
 
 
 
+
+
+/*--------------------------------------------------------------
+# SLOW LOADING
+--------------------------------------------------------------*/
+
+
+
+.slow-load {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slow-load[src]:not([src="/assets/img/omyka-images/placeholder-omyka-company.png"]) {
+  opacity: 1;
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
